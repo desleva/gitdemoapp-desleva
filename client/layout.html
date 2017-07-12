@@ -1,0 +1,14 @@
+<template name="layout">
+  <h1>My great site</h1>
+  <a href="/"        class="btn btn-info btn-sm">Home   </a>
+  <a href="/friends" class="btn btn-info btn-sm">Friends</a>
+  <hr>
+  {{#if currentUser}}
+  {{> yield}}
+  {{else}}
+  You must log in to use this app
+  {{/if}}
+  <hr>
+  &copy; Tim Hickey 2017 All Rights Reserved..
+  {{> loginButtons}}
+</template>
