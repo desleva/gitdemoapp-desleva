@@ -2,7 +2,7 @@ div.fb-post {
   margin:20px;
   border:thin solid blue;
   padding:10px;
-  background-color:rgb(230,240,250);
+  background-color:rgb(230,240,50);
 }
 
 textarea#fb-posttext{
