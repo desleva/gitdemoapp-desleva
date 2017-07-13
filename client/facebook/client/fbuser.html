@@ -1,7 +1,9 @@
 <template name="fbuser">
   <img id="bio-img" src="{{user.url}}" width="400"> <h1>{{user.name}}/{{user.program}}</h1>
 
-  <h1 id="location">Location:{{user.location}}</h1><h1 id="location">Languages:{{user.language}}</h1><h1 id="location">Interests:{{user.hobbies}}</h1>
+  <p id="location">Location:{{user.place}}</p>
+  <p id="languages">Languages:{{user.language}}</p>
+  <p id="interests">Interests:{{user.hobbies}}</p>
   <p id="bio">{{user.bio}}</p>
 
 

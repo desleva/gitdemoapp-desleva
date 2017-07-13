@@ -24,9 +24,10 @@ Template.fbprofile.helpers({
 
 Template.fbinfo.events({
   "click #js-submit"(event,instance){
+    event.preventDefault();
     name = instance.$('#js-name').val();
     url = instance.$('#js-url').val();
-    location = instance.$('#js-location').val();
+    place = instance.$('#js-location').val();
     language = instance.$('#js-language').val();
     hobbies = instance.$('#js-hobbies').val();
     bio = instance.$('#js-bio').val();
@@ -34,11 +35,12 @@ Template.fbinfo.events({
     console.log('just read '+name);
     this.user.name = name;
     this.user.url = url;
-    this.user.location = location;
+    this.user.place = place;
     this.user.language = language;
     this.user.hobbies = hobbies;
     this.user.bio = bio;
     this.user.program = program;
+    console.dir(this.user)
     var zz = Profiles.update(this.user._id,this.user);
     //Router.go('/fbuser/'+this.user._id);
 
