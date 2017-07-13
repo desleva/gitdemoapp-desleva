@@ -26,11 +26,17 @@ Template.fbinfo.events({
   "click #js-submit"(event,instance){
     name = instance.$('#js-name').val();
     url = instance.$('#js-url').val();
+    location = instance.$('#js-location').val();
+    language = instance.$('#js-language').val();
+    hobbies = instance.$('#js-hobbies').val();
     bio = instance.$('#js-bio').val();
     program = instance.$('#js-program').val();
     console.log('just read '+name);
     this.user.name = name;
     this.user.url = url;
+    this.user.location = location;
+    this.user.language = language;
+    this.user.hobbies = hobbies;
     this.user.bio = bio;
     this.user.program = program;
     var zz = Profiles.update(this.user._id,this.user);

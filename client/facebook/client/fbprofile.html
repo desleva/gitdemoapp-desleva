@@ -14,13 +14,22 @@
   <a href="/fbtimeline" class="btn btn-primary">See Posts</a>
     <h1>Profile</h1>
   <hr>
-  Your Full Name:
+  Your Name:
     <input type="text" id="js-name" value="{{user.name}}">
   <br>
-  A link to your picture:
-    <input type="text" id="js-url" value="{{user.url}}">
+  Profile Picture:
+  <input type="text" id="js-url" value="{{user.url}}">
+  <br>
+  Location
+    <input type="text" id="js-location" value="{{user.location}}">
     <br>
-  A short bio<br>
+  Language(s)
+    <input type="text" id="js-language" value="{{user.language}}">
+    <br>
+  Hobbies/Interests
+    <input type="text" id="js-hobbies" value="{{user.hobbies}}">
+    <br>
+  Bio<br>
     <textarea id="js-bio" cols="100%" rows="5">{{user.bio}}</textarea>
     <br>
 
