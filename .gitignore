@@ -2,7 +2,10 @@ node_modules/
 .DS_Store
 *~
 <<<<<<< HEAD
+<<<<<<< HEAD
 client/facebook/client/fbuser.html
+=======
+>>>>>>> 101108439f062fc312501b3bff891f677add8d28
 =======
 >>>>>>> 101108439f062fc312501b3bff891f677add8d28
 client/findapenpal.html
