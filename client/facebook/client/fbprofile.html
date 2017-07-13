@@ -1,0 +1,35 @@
+<template name="fbprofile">
+
+  {{#if currentUser}}
+    {{> fbinfo user=user}}
+  {{else}}
+  You have to log in to access this page
+  {{/if}}
+
+
+</template>
+
+<template name="fbinfo">
+  <a href="/fbusers" class="btn  btn-primary">See Your Follows</a>
+  <a href="/fbtimeline" class="btn btn-primary">See Posts</a>
+    <h1>Profile</h1>
+  <hr>
+  Your Full Name:
+    <input type="text" id="js-name" value="{{user.name}}">
+  <br>
+  A link to your picture:
+    <input type="text" id="js-url" value="{{user.url}}">
+    <br>
+  A short bio<br>
+    <textarea id="js-bio" cols="100%" rows="5">{{user.bio}}</textarea>
+    <br>
+
+  <br>
+
+    <button id="js-submit" class="btn btn-info">Update Profile</button>
+    <div id="myfbprofile">
+    {{#let user=user}}
+    {{> fbuser user=user}}
+    {{/let}}
+    </div>
+</template>

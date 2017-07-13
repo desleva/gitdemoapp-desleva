@@ -1,0 +1,35 @@
+<template name="fbtimeline">
+  <a href="/fbusers" class="btn btn-primary">See Your Follows</a>
+  <a href="/fbprofile" class="btn btn-primary">Update your Profile</a>
+  <h1>Status</h1>
+  {{> fbmakepost}}
+  <h1> Posts of your Friends</h1>
+  {{#each p in posts}}
+    {{> fbshowpost p=p}}
+  {{/each}}
+</template>
+
+<template name="fbmakepost">
+  <textarea id="fb-posttext" cols="100%" rows="5" placeholder="What is your status?">
+  </textarea>
+  <button id="submit" class="btn btn-small btn-info">Post status</button>
+</template>
+
+<template name="fbshowpost">
+  <div class="fb-post">
+    <b>{{p.name}}</b> :: <i>{{p.createdAt}}</i>
+    {{#if owner p}}
+       <span class="glyphicon glyphicon-remove fbrmpost" aria-hidden="true"></span>
+    {{/if}}
+
+    <br>
+    {{p.text}}
+    <br>
+      {{#if likes p}}
+         <span class="glyphicon glyphicon-thumbs-down fbunlikepost" aria-hidden="true"></span>
+      {{else}}
+        <span class="glyphicon glyphicon-thumbs-up fblikepost" aria-hidden="true"></span>
+      {{/if}}
+      {{numlikes p}} likes
+  </div>
+  </template>

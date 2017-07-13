@@ -1,0 +1,30 @@
+div.fb-post {
+  margin:20px;
+  border:thin solid blue;
+  padding:10px;
+  background-color:rgb(230,240,250);
+}
+
+textarea#fb-posttext{
+  background-color:rgb(250,240,230);
+}
+
+#bio-img{
+  padding:1em;
+  margin:1em;
+}
+#bio {
+  font: italic 18pt 'New Times Roman';
+  margin:1em;
+  padding:1em;
+}
+
+#myfbprofile {
+  border:thick solid black;
+  padding:1em; margin:1em;
+  background: #ddeeff
+}
+
+.fbrmpost {
+  float:right;
+}
