@@ -14,14 +14,14 @@ textarea#fb-posttext{
   margin:1em;
 }
 #bio {
-  font: italic 18pt 'New Times Roman';
+  font: 18pt;
   margin:1em;
   padding:1em;
 }
 
 #myfbprofile {
   padding:1em; margin:1em;
-  background: 
+  background:
 }
 
 .fbrmpost {
