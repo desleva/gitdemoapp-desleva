@@ -10,6 +10,8 @@
 </template>
 
 <template name="fbinfo">
+ <div class="row">
+   <div class="col-md-6">
   <a href="/fbusers" class="btn  btn-primary">See Your Follows</a>
   <a href="/fbtimeline" class="btn btn-primary">See Posts</a>
     <h1>Profile</h1>
@@ -36,9 +38,16 @@
   <br>
 
     <button id="js-submit" class="btn btn-info">Update Profile</button>
+</div>
+
+<div class="col-md-6">
+
+
     <div id="myfbprofile">
     {{#let user=user}}
     {{> fbuser user=user}}
     {{/let}}
     </div>
+  </div>
+</div>
 </template>
