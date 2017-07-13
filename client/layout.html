@@ -1,4 +1,5 @@
 <template name="layout">
+  {{> loginButtons}}
   <html>
   <body style="background-color:powderblue;">
 
@@ -8,12 +9,12 @@
   </body>
   </html>
 
-  <a href="/"        class="btn btn-info btn-sm">Home   </a>
-  <a href="/friends" class="btn btn-info btn-sm">Friends</a>
-    <a href="/fbprofile" class="btn btn-info btn-sm">Profiles</a>
+  <a href="/"        class="btn btn-info btn-sm">Homie   </a>
+  <a href="/friends" class="btn btn-info btn-sm">Friendszone</a>
+    <a href="/fbprofile" class="btn btn-info btn-sm">Profiler?</a>
   <hr>
   {{> yield}}
   <hr>
   &copy; PenPal Finder 2017 All Rights Reserved..
-  {{> loginButtons}}
+
 </template>
