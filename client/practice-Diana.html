@@ -1,15 +1,14 @@
 <template name="practiceDiana">
 
-  <div style="border:1px solid black;padding:10px;background-color:gainsboro;float:left;">
-    <h1>Chat Room</h1>
-    <room style="trendy" size="moderate" temperature="comfortable" furnishings="spartan">
-      <chat type="secure" action="discuss">
-        <post>
-          <textarea type="chat" style="width:300px;height:150px;"></textarea>
-        </post>
-        <br />
-        <input type="button" name="chat" value="Chat Now" />
-      </chat>
-    </room>
-  </div>
+  <div id="chat-wrap">
+<h1>Chat Window</h1>
+<div id="user-name"></div>
+<div id="chat-box"><div id="chat-row"></div></div>
+<form id="send-message-area">
+<p>Your message: </p>
+<textarea id="posttext" maxlength="120"></textarea>
+</form>
+</div>
+
+
 </template>
