@@ -12,7 +12,8 @@ Template.register.events({
     var gender = instance.$("#js-gender").val();
     console.log("ppp="+ppp);
     var user = {
-      email,password:ppp,profile:{fullname,username,country,languages},
+      email,password:ppp,
+      profile:{fullname,username,country,languages},
     }
     console.log(JSON.stringify(user))
     Accounts.createUser(user);
