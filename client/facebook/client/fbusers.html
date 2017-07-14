@@ -18,6 +18,9 @@
   <tr>
     <td><img src="{{u.url}}" height="100px"></td>
     <td><a href="fbuser/{{u._id}}">{{u.name}}</a></td>
+    <td><a href="fbuser/{{u._id}}">Location: {{u.place}}</a></td>
+    <td><a href="fbuser/{{u._id}}">Languages Spoken: {{u.language}}</a></td>
+    <td><a href="fbuser/{{u._id}}">Interests: {{u.hobbies}}</a></td>
     <td>
       {{#if isFriend}}
         <button id="js-defriend" class="btn btn-sm">Stop Following</button>
