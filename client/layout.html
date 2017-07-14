@@ -24,10 +24,18 @@ PenPalsFinder
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <ul class="nav navbar-nav">
            <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+<<<<<<< HEAD
            <li><a href="/friends">friends</a></li>
            <li><a href="/fbprofile">profile</a></li>
            <li><a href="/findapenpal">find a penpal</a></li>
            <li><a href="/chatRoom">chatroom</a></li>
+=======
+           <li><a href="/friends">Friends</a></li>
+           <li><a href="/fbprofile">Profile</a></li>
+           <li><a href="/findapenpal">Find a Penpal</a></li>
+           <li><a href="/chatroom">Chatroom</a></li>
+           <li><a href="/users">Users</a></li>
+>>>>>>> 578f3861a646573e27df212995eb88a66506de40
 
 
          </ul>
@@ -38,14 +46,27 @@ PenPalsFinder
 
          </form>
          <ul class="nav navbar-nav navbar-right">
-           <li> {{> loginButtons}}</li>
+
+              {{#if currentUser}}
+              <li>  <button id="logout" onclick="Meteor.logout()">logout</button></li>
+              {{else}}
+              <li>  <a href="/login">login</a></li>
+              <li> <a href="/register">register</a></li>
+              {{/if}}
 
          </ul>
        </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
    </nav>
 
-
+   <head>
+   <style>
+   body  {
+       background-image: url("paper.gif");
+       background-color: #5bffb2;
+   }
+   </style>
+   </head>
   {{> yield}}
   <hr>
   &copy; PenPal Finder 2017 All Rights Reserved..
