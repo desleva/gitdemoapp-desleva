@@ -28,6 +28,7 @@ PenPalsFinder
            <li><a href="/fbprofile">profile</a></li>
            <li><a href="/findapenpal">find a penpal</a></li>
            <li><a href="/chatroom">chatroom</a></li>
+           <li><a href="/users">users</a></li>
 
 
          </ul>
@@ -38,7 +39,13 @@ PenPalsFinder
 
          </form>
          <ul class="nav navbar-nav navbar-right">
-           <li> {{> loginButtons}}</li>
+
+              {{#if currentUser}}
+              <li>  <button id="logout" onclick="Meteor.logout()">logout</button></li>
+              {{else}}
+              <li>  <a href="/login">login</a></li>
+              <li> <a href="/register">register</a></li>
+              {{/if}}
 
          </ul>
        </div><!-- /.navbar-collapse -->
