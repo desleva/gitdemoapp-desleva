@@ -2,6 +2,7 @@
 
   <a href="/fbprofile" class="btn  btn-primary">Update your profile</a>
   <a href="/fbtimeline" class="btn  btn-primary">See Posts</a>
+  <input type="text" name="search" placeholder="Search People..">
     <h1>Members' Profiles</h1>
   <hr>
   <table class="table table-bordered table-striped">
@@ -15,7 +16,6 @@
 
 <template name="fbperson">
   <tr>
-
     <td><img src="{{u.url}}" height="100px"></td>
     <td><a href="fbuser/{{u._id}}">{{u.name}}</a></td>
     <td>
