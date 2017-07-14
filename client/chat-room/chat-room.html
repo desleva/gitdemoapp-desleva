@@ -1,0 +1,40 @@
+<template name="chat-room">
+
+<head>
+  <body>
+    Chat Room
+  </body>
+</head>
+
+  <br>
+<div class='clear-left'>
+
+<h1 class = 'slackey'> Let's Chat.</h1>
+<div ng-show = 'doneLoading'>
+  <div class = 'chat-room'>
+    <div class = 'outer-chat-box'>
+      <div scroll-glue class = 'inner-chat-box' id= 'message-box'>
+        <ul id = 'chat-ul' class = 'striped-ul'>
+        </ul>
+
+      </div>
+      <form ng-submit = 'sendMessage()' name = 'chatSend'>
+        <input type='text' ng-model = 'chatInput' class = 'chat-input' autocomplete="off" required>
+        <button ng-disabled = 'chatSend.$invalid' class = 'chat-submit'>Send</button>
+      </form>
+    <h4 ng-if='isTeacher()' class = 'center'> Note: As a teacher, you see the unedited chat.  <br>Those words you see with a line through them <br>are filtered for students.</h4>
+    <h4 ng-if='isTeacher() === false && isDisabled()===false' class = 'center'> Typing {{teacherName}} will alert your teacher you need help!<br>
+    Use this power wisely.</h4>
+    </div>
+    <div class = 'online-user-box'>
+      <h4 class = 'center users-title'>Users Online</h4>
+      <ul id = 'user-ul' class = 'user-ul'>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<img ng-hide = 'doneLoading' class='centered loading-spinner' src="./public/images/loading.gif">
+</div>
+
+</template>
