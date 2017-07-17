@@ -28,7 +28,7 @@ Template.register.events({
        owner:Meteor.userId(),
     })
   });
-    Router.go('main');
+    Router.go('fbprofile');
 
   }
 })
