@@ -1,5 +1,5 @@
 
-Template.users.helpers({
+Template.fbusers.helpers({
   users(){return Profiles.find();},
 })
 Template.fbperson.helpers({
