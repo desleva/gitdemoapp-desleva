@@ -25,7 +25,7 @@ Template.fbprofile.helpers({
 Template.fbinfo.events({
   "click #js-submit"(event,instance){
     event.preventDefault();
-    name = instance.$('#js-name').val();
+    uname = instance.$('#js-uname').val();
     url = instance.$('#js-url').val();
     place = instance.$('#js-location').val();
     language = instance.$('#js-language').val();
@@ -33,7 +33,7 @@ Template.fbinfo.events({
     bio = instance.$('#js-bio').val();
     program = instance.$('#js-program').val();
     console.log('just read '+name);
-    this.user.name = name;
+    this.user.uname = uname;
     this.user.url = url;
     this.user.place = place;
     this.user.language = language;
