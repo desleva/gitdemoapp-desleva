@@ -1,7 +1,4 @@
-<template name="friends">
-
-  <a href="/fbprofile" class="btn  btn-primary">Update your profile</a>
-  <a href="/fbtimeline" class="btn  btn-primary">See Posts</a>
+<template name="fbusers">
   <input type="text" name="search" placeholder="Search People..">
     <h1>Members' Profiles</h1>
   <hr>
@@ -23,10 +20,24 @@
     <td><a href="fbuser/{{u._id}}">Interests: {{u.hobbies}}</a></td>
     <td>
       {{#if isFriend}}
-        <button id="js-defriend" class="btn btn-sm">Stop Following</button>
+        <button id="js-defriend" class="btn btn-sm">Unfriend</button>
       {{else}}
-        <button id="js-friend" class="btn btn-sm">Follow</button>
+        <button id="js-friend" class="btn btn-sm">Friend</button>
       {{/if}}
     </td>
   </tr>
+</template>
+
+<template name="friends2">
+    <h1>Members' Profiles</h1>
+  <hr>
+  <table class="table table-bordered table-striped">
+    <tbody>
+      {{#if isFriend}}
+      {{#each u in users}}
+        {{> fbperson u=u}}
+      {{/each}}
+      {{/if}}
+    </tbody>
+  </table>
 </template>

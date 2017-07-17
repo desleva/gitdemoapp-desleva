@@ -1,4 +1,4 @@
-Template.users.helpers({
-  users(){return Meteor.users.find().fetch();},
-  
+Template.usersold.helpers({
+  usersold(){return Meteor.users.find().fetch();},
+
 })
