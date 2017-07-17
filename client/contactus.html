@@ -1,19 +1,20 @@
 <template name="contactus">
   <h1> Ask Us Your Question</h1>
   <div class="container">
-    <form action="/action_page.php">
+    <form action="mailto:nressa13@gmail.com">
 
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name">
 
-      <label for="lname">Email</label>
-      <input type="text" id="email" name="email" placeholder="Email">
-
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:50px"></textarea>
-
-      <input type="submit" value="Submit">
-
+      <label for="email">Email:</label>
+      <br>
+      <input type="email" id="email" name="email" placeholder="Email" style="width:500px">
+<br>
+<br>
+      <label for="subject">Your Question:</label>
+<textarea id="text" name="question" placeholder="What is your question" style="height:30px" stype="length:400"></textarea>
+<br>
+<input type="submit" value="Send">
     </form>
   </div>
 </template>
