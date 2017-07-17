@@ -1,0 +1,27 @@
+<script type="text/javascript">
+// 请求动画帧
+(function(w){
+	w.requestAnimationFrame = w.requestAnimationFrame
+		|| w.webkitRequestAnimationFrame
+		|| w.msRequestAnimationFrame
+		|| w.mozRequestAnimationFrame
+		|| w.oRequestAnimationFrame
+		|| function(a) {
+			return setTimeout(a, 16);
+		};
+	w.cancelAnimationFrame = w.cancelAnimationFrame
+		|| w.webkitCancelAnimationFrame
+		|| w.msCancelAnimationFrame
+		|| w.mozCancelAnimationFrame
+		|| w.oCancelAnimationFrame
+		|| w.cancelRequestRequestAnimationFrame
+		|| w.webkitCancelRequestAnimationFrame
+		|| w.msCancelRequestAnimationFrame
+		|| w.mozCancelRequestAnimationFrame
+		|| w.oCancelRequestAnimationFrame
+		|| function(a) {
+			return clearTimeout(a);
+		};
+})(window);
+</script>
+<script type="text/javascript" src="examples/code-list/ws-chatroom.js"></script>
