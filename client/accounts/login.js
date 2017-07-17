@@ -5,7 +5,10 @@ Template.login.events({
     var username=instance.$("#js-uname").val();
     var password=instance.$("#js-psw").val();
     console.log(username+" "+password);
-    Meteor.loginWithPassword(username,password);
+    Meteor.loginWithPassword(username,password,
+    function(error){
+      if (error) {alert("Login Failed.. You must register first")}
+    });
     Router.go('main');
   }
 })
