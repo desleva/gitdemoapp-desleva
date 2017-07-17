@@ -13,10 +13,21 @@ Template.register.events({
     console.log("ppp="+ppp);
     var user = {
       email,password:ppp,
-      profile:{fullname,username,country,languages},
+
     }
     console.log(JSON.stringify(user))
-    Accounts.createUser(user);
+    userid=Accounts.createUser(user,
+      function(){
+        console.log("logged in "+Meteor.userId());
+    Profiles.insert(
+      {uname:fullname,
+       username:username,
+       place:country,
+       language:languages,
+       gender:gender,
+       owner:Meteor.userId(),
+    })
+  });
     Router.go('main');
 
   }
