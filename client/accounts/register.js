@@ -18,7 +18,7 @@ Template.register.events({
     console.log(JSON.stringify(user))
     userid=Accounts.createUser(user,
       function(){
-        console.log("logged in "+Meteor.userId());
+        alert("logged in "+Meteor.userId());
     Profiles.insert(
       {uname:fullname,
        username:username,
@@ -28,7 +28,7 @@ Template.register.events({
        owner:Meteor.userId(),
     })
   });
-    Router.go('fbprofile');
+    Router.go('main');
 
   }
 })
