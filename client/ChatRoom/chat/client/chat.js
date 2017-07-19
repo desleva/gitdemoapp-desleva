@@ -3,7 +3,7 @@ Template.chatRoom.helpers({
     // return the last five chats
     // sorted by when they were created (most recent, first)
     return Chats.find({},
-                      {limit:5,
+                      {limit:50,
                         sort: {createdAt: -1}})},
 
 })
